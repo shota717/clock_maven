@@ -33,12 +33,7 @@ public class Clock {
     }
 
     public Clock(TimeZone timeZone){
-        if(timeZone != null){
-            calendar = Calendar.getInstance(timeZone);
-        }
-        else{
-            calendar = Calendar.getInstance();
-        }
+        calendar = timeZone != null ? Calendar.getInstance(timeZone) : Calendar.getInstance()
     }
 
     private void updateTime(){
